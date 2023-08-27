@@ -1,0 +1,150 @@
+Imports System.Data.OleDb
+Imports System.Data
+Imports System.Data.SqlClient
+Imports System.Configuration
+Public Class frmResult
+
+    Private Sub frmResult_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Label19.Text = frmAddQuestions.NuNameLB.Text
+        Dim SQL As String
+        Dim dbConnection As OleDbConnection
+        Dim dbCommand As New OleDbCommand
+        Dim dbFilePath As String = "C:\Users\User\Documents\Visual Studio 2008\Projects\PlaPoly Examination and Grading System\EXAMS.mdb;"
+        SQL = "SELECT Reg_No, You_Score, Out_Off FROM Answer1"
+        dbConnection = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & dbFilePath)
+        dbCommand = New OleDbCommand(SQL, dbConnection)
+        Dim data As New OleDbDataAdapter(dbCommand)
+        Dim table As New DataTable("Test")
+        dbConnection.Open()
+        data.Fill(table)
+        Label1.Text = table.Rows(Label19.Text)("You_Score").ToString()
+
+        Dim SQL2 As String
+        Dim dbConnection2 As OleDbConnection
+        Dim dbCommand2 As New OleDbCommand
+        Dim dbFilePath2 As String = "C:\Users\User\Documents\Visual Studio 2008\Projects\PlaPoly Examination and Grading System\EXAMS.mdb;"
+        SQL2 = "SELECT Reg_No, You_Score, Out_Off FROM Answer2"
+        dbConnection2 = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & dbFilePath2)
+        dbCommand2 = New OleDbCommand(SQL2, dbConnection2)
+        Dim data2 As New OleDbDataAdapter(dbCommand2)
+        Dim table2 As New DataTable("Test")
+        dbConnection2.Open()
+        data2.Fill(table2)
+        Label2.Text = table2.Rows(Label19.Text)("You_Score").ToString()
+
+        Dim SQL3 As String
+        Dim dbConnection3 As OleDbConnection
+        Dim dbCommand3 As New OleDbCommand
+        Dim dbFilePath3 As String = "C:\Users\User\Documents\Visual Studio 2008\Projects\PlaPoly Examination and Grading System\EXAMS.mdb;"
+        SQL3 = "SELECT Reg_No, You_Score, Out_Off FROM Answer3"
+        dbConnection3 = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & dbFilePath3)
+        dbCommand3 = New OleDbCommand(SQL3, dbConnection3)
+        Dim data3 As New OleDbDataAdapter(dbCommand3)
+        Dim table3 As New DataTable("Test")
+        dbConnection3.Open()
+        data3.Fill(table3)
+        Label3.Text = table3.Rows(Label19.Text)("You_Score").ToString()
+
+        Dim SQL4 As String
+        Dim dbConnection4 As OleDbConnection
+        Dim dbCommand4 As New OleDbCommand
+        Dim dbFilePath4 As String = "C:\Users\User\Documents\Visual Studio 2008\Projects\PlaPoly Examination and Grading System\EXAMS.mdb;"
+        SQL4 = "SELECT Reg_No, You_Score, Out_Off FROM Answer4"
+        dbConnection4 = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & dbFilePath4)
+        dbCommand4 = New OleDbCommand(SQL4, dbConnection4)
+        Dim data4 As New OleDbDataAdapter(dbCommand4)
+        Dim table4 As New DataTable("Test")
+        dbConnection4.Open()
+        data4.Fill(table4)
+        Label4.Text = table4.Rows(Label19.Text)("You_Score").ToString()
+
+        Dim SQL5 As String
+        Dim dbConnection5 As OleDbConnection
+        Dim dbCommand5 As New OleDbCommand
+        Dim dbFilePath5 As String = "C:\Users\User\Documents\Visual Studio 2008\Projects\PlaPoly Examination and Grading System\EXAMS.mdb;"
+        SQL5 = "SELECT Reg_No, You_Score, Out_Off FROM Answer5"
+        dbConnection5 = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & dbFilePath5)
+        dbCommand5 = New OleDbCommand(SQL5, dbConnection5)
+        Dim data5 As New OleDbDataAdapter(dbCommand5)
+        Dim table5 As New DataTable("Test")
+        dbConnection5.Open()
+        data5.Fill(table5)
+        Label5.Text = table5.Rows(Label19.Text)("You_Score").ToString()
+
+        Dim SQL6 As String
+        Dim dbConnection6 As OleDbConnection
+        Dim dbCommand6 As New OleDbCommand
+        Dim dbFilePath6 As String = "C:\Users\User\Documents\Visual Studio 2008\Projects\PlaPoly Examination and Grading System\EXAMS.mdb;"
+        SQL6 = "SELECT Reg_No, You_Score, Out_Off FROM Answer6"
+        dbConnection6 = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & dbFilePath6)
+        dbCommand6 = New OleDbCommand(SQL6, dbConnection6)
+        Dim data6 As New OleDbDataAdapter(dbCommand6)
+        Dim table6 As New DataTable("Test")
+        dbConnection6.Open()
+        data6.Fill(table6)
+        Label6.Text = table6.Rows(Label19.Text)("You_Score").ToString()
+
+        If Label1.Text < 2 Then
+            Label26.Text = "C/O"
+            Label1.ForeColor = Color.Red
+        Else
+            Label26.Text = "Pass"
+            Label1.ForeColor = Color.Green
+        End If
+        If Label2.Text < 2 Then
+            Label27.Text = "C/O"
+            Label2.ForeColor = Color.Red
+        Else
+            Label27.Text = "Pass"
+            Label2.ForeColor = Color.Green
+        End If
+        If Label3.Text < 2 Then
+            Label28.Text = "C/O"
+            Label3.ForeColor = Color.Red
+        Else
+            Label28.Text = "Pass"
+            Label3.ForeColor = Color.Green
+        End If
+        If Label4.Text < 2 Then
+            Label29.Text = "C/O"
+            Label4.ForeColor = Color.Red
+        Else
+            Label29.Text = "Pass"
+            Label4.ForeColor = Color.Green
+        End If
+        If Label5.Text < 2 Then
+            Label30.Text = "C/O"
+            Label5.ForeColor = Color.Red
+        Else
+            Label30.Text = "Pass"
+            Label5.ForeColor = Color.Green
+        End If
+        If Label6.Text < 2 Then
+            Label31.Text = "C/O"
+            Label6.ForeColor = Color.Red
+        Else
+            Label31.Text = "Pass"
+            Label6.ForeColor = Color.Green
+        End If
+    End Sub
+
+
+
+
+    Private Sub Button2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        Dim AB As New PrintDialog
+        Try
+            AB.ShowDialog()
+            GroupBox1.Text = AB.PrintToFile
+        Catch ex As Exception
+            'Again, do nothing on exception
+        End Try
+    End Sub
+
+    Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        frmAddQuestions.Show()
+        Me.Hide()
+    End Sub
+
+   
+End Class
