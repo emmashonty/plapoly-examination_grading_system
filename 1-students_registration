@@ -1,0 +1,91 @@
+Public Class Form1
+
+    Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
+        PictureBox1.Image = My.Resources.poly_gate '"D:\Dream Project\Payroll Management System\Payroll Management System\Resources\complogo.jpg"
+        Timer4.Enabled = True
+        Timer3.Enabled = True
+        Timer2.Enabled = True
+        Timer1.Enabled = False
+    End Sub
+
+    Private Sub Timer2_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer2.Tick
+        PictureBox1.Image = My.Resources.bar_chart
+        Timer4.Enabled = True
+        Timer3.Enabled = True
+        Timer2.Enabled = False
+        Timer1.Enabled = True
+    End Sub
+
+    Private Sub Timer3_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer3.Tick
+        PictureBox1.Image = My.Resources.Globe
+        Timer4.Enabled = True
+        Timer3.Enabled = False
+        Timer2.Enabled = True
+        Timer1.Enabled = True
+    End Sub
+
+    Private Sub Timer4_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer4.Tick
+        PictureBox1.Image = My.Resources.complogo
+        Timer4.Enabled = False
+        Timer3.Enabled = True
+        Timer2.Enabled = True
+        Timer1.Enabled = True
+    End Sub
+
+    Private Sub Timer5_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer5.Tick
+        PictureBox2.Image = My.Resources.AirBana
+        Timer5.Enabled = False
+        Timer6.Enabled = True
+        Timer7.Enabled = True
+    End Sub
+
+    Private Sub Timer6_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer6.Tick
+        PictureBox2.Image = My.Resources.poly_logo1
+        Timer5.Enabled = True
+        Timer6.Enabled = False
+        Timer7.Enabled = True
+    End Sub
+
+    Private Sub Timer7_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer7.Tick
+        PictureBox2.Image = My.Resources.bulk
+        Timer5.Enabled = True
+        Timer6.Enabled = True
+        Timer7.Enabled = False
+    End Sub
+
+    Private Sub ExitToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ExitToolStripMenuItem.Click
+        End
+    End Sub
+
+
+
+    Private Sub Computer2ToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Computer2ToolStripMenuItem.Click
+        frmStudentLogin.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub AnswerQuestionsToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AnswerQuestionsToolStripMenuItem.Click
+        frmStudentLogin.Show()
+        Me.Hide()
+    End Sub
+
+    
+    Private Sub HomeToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HomeToolStripMenuItem.Click
+        MsgBox("You are currently on this Page")
+    End Sub
+
+    Private Sub EntryToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EntryToolStripMenuItem.Click
+        frmAdminLogin.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub AdminToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AdminToolStripMenuItem.Click
+        frmAdminLogin.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub StudentToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles StudentToolStripMenuItem.Click
+        frmStudentLogin.Show()
+        Me.Hide()
+    End Sub
+End Class
