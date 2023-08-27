@@ -1,0 +1,72 @@
+Imports System.Data.OleDb
+Imports System.Data
+Imports System.Data.SqlClient
+Imports System.Configuration
+Public Class frmAddQuestions
+    Public Shared NuNameLB As Label
+    Private Sub EnterExamQuestionsToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EnterExamQuestionsToolStripMenuItem.Click
+        frmAdminLogin.Show()
+        Me.Hide()
+    End Sub
+
+
+    Private Sub HomeToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HomeToolStripMenuItem.Click
+        Form1.Show()
+        Me.Hide()
+    End Sub
+
+    
+    Private Sub frmAddQuestions_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Label14.Text = frmStudentLogin.NuNameTB.Text
+    End Sub
+
+    Private Sub ResultToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ResultToolStripMenuItem.Click
+        NuNameLB = Label14
+        frmResult.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub AnswerQuestionsToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AnswerQuestionsToolStripMenuItem.Click
+        NuNameLB = Label14
+        Form2.Show()
+        Me.Hide()
+
+    End Sub
+
+    Private Sub Computer2ToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Computer2ToolStripMenuItem.Click
+        NuNameLB = Label14
+        Form5.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub Computer3ToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Computer3ToolStripMenuItem.Click
+        NuNameLB = Label14
+        Form6.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub Computer4ToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Computer4ToolStripMenuItem.Click
+        NuNameLB = Label14
+        Form7.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub Computer5ToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Computer5ToolStripMenuItem.Click
+        NuNameLB = Label14
+        Form8.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub Computer6ToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Computer6ToolStripMenuItem.Click
+        NuNameLB = Label14
+        Form9.Show()
+        Me.Hide()
+    End Sub
+
+   
+    Private Sub Label3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label3.Click
+        frmStudentLogin.Show()
+        Me.Hide()
+    End Sub
+
+End Class
